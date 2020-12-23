@@ -4,7 +4,6 @@ import stripes from '../assets/images/stripes.svg';
 
 const LogoStyles = styled.div`
   /* This value controls the entire size of the logo*/
-  font-size: 6px;
   font-size: clamp(1px, 0.65vw, 8px);
   width: 30em;
   height: 30em;
