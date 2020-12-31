@@ -2,19 +2,25 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
 export const ToppingsFilter = () => {
-  const { toppings } = useStaticQuery(graphql`
+  const { toppings, pizzas } = useStaticQuery(graphql`
     query {
-      allSanityTopping {
+      toppings: allSanityTopping {
         nodes {
           id
           name
-          #   vegetarian
+          vegetarian
+        }
+      }
+      pizzas: allSanityPizza {
+        nodes {
+          id
+          name
         }
       }
     }
   `);
 
-  console.log(toppings);
+  console.log({ toppings, pizzas });
   return (
     <div>
       <p>Toppings</p>
